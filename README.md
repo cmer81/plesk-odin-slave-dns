@@ -1,3 +1,5 @@
+[![Docker Repository on Quay Enterprise](https://quay.cmer.fr/repository/cmer/slave-dns/status "Docker Repository on Quay Enterprise")](https://quay.cmer.fr/repository/cmer/slave-dns)
+
 docker-bind slave for odin and another
 ------------
 
