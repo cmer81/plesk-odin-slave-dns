@@ -29,6 +29,13 @@ configuration.
 
 Environement:
 
+Usage for Odin (Plesk):
+---------
+```
+$ docker.io run --name bind -p <ip-address>:53:53 -p <ip-address>:53:53/udp <ip-address>:953:953 -d \
+-e DNS_IP_MASTER=<your_Odin_IP> -e RNDC_KEY=<your_rndc_key> \
+-t quay.cmer.fr/repository/cmer/slave-dns:latest
+```
 * `DNS_IP_MASTER`: ip your odin master server
 * `RNDC_KEY`: Your key rndc
 
@@ -43,13 +50,5 @@ $ docker.io run -p <ip-address>:53:53 -p <ip-address>:53:53/udp -p <ip-address>:
 
 The command above will start a container give you a shell. Don't
 forget to start the service running the `dns-start` script.
-
-Usage for Odin (Plesk):
-
-```
-$ docker.io run --name bind -p <ip-address>:53:53 -p <ip-address>:53:53/udp <ip-address>:953:953 -d \
--e DNS_IP_MASTER=<your_Odin_IP> -e RNDC_KEY=<your_rndc_key> \
--t quay.cmer.fr/repository/cmer/slave-dns:latest
-```
 
 The command above will start a container and return its ID.
