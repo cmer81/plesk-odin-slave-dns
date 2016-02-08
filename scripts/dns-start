@@ -1,7 +1,8 @@
 #!/bin/bash
 
-if [[ -f /opt/config.sh ]]; then
+if [ ! -f /opt/firstrun.sh ]; then
         sh /opt/config.sh
+        touch /opt/firstrun.sh
 fi
 
 exec  /usr/sbin/named -u bind -g
